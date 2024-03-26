@@ -652,7 +652,6 @@ Example
     {
       "content": "{\"action\":\"lock_sheet\",\"name\":\"工作表1\"}",
       "createdAt": "2022-03-11T03:59:04Z",
-      "fileGuid": "Vi9rVPy7v6RJvLZK",
       "historyType": 1,
       "id": "622ac9084079aa0006d54f3c",
       "name": "",
