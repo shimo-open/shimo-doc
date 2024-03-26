@@ -606,6 +606,7 @@ axios(config)
 | 字段名                   | 类型    | 值示例                   | 说明                                           |
 | :----------------------- | :------ | :----------------------- | :--------------------------------------------- |
 | histories                | array   |                          | 侧边栏历史数组                                 |
+| histories[i].content     | string  |                          | 协作文件格式数据                               |
 | histories[i].createdAt   | string  | 2021-06-07T06:12:24Z     | 本条侧边栏历史创建时间                         |
 | histories[i].historyType | number  | 2                        | 侧边栏历史类型，1 为操作历史，2 为编辑产生     |
 | histories[i].id          | string  | 60bdb8c847a7850006bf12c1 | 侧边栏历史 ID                                  |
@@ -622,6 +623,7 @@ Example
 {
   "histories": [
     {
+      "content": "{\"range\":[1,1],\"changeset\":\"[[10, \\\"\\\\n\\\", \\\"line:\\\\\\\"init\\\\\\\"\\\"]]\",\"frozen\":true}",
       "createdAt": "2021-06-07T06:12:24Z",
       "historyType": 2,
       "id": "60bdb8c847a7850006bf12c1",
@@ -630,6 +632,7 @@ Example
       "userId": "user123,user134"
     },
     {
+      "content": "{\"range\":[2,3],\"changeset\":\"省略若干内容 ...\"}",
       "createdAt": "2021-06-07T06:12:39Z",
       "historyType": 2,
       "id": "60bdb8d747a7850006bf12c2",
@@ -638,6 +641,7 @@ Example
       "userId": "user123,user134"
     },
     {
+      "content": "{\"action\":\"unlock_cell\",\"range\":[\"E14:E14\"],\"name\":\"工作表1\"}",
       "createdAt": "2022-03-11T03:58:59Z",
       "historyType": 1,
       "id": "622ac9034079aa0006d54f3b",
@@ -646,8 +650,8 @@ Example
       "userId": "user123"
     },
     {
+      "content": "{\"action\":\"lock_sheet\",\"name\":\"工作表1\"}",
       "createdAt": "2022-03-11T03:59:04Z",
-      "fileGuid": "Vi9rVPy7v6RJvLZK",
       "historyType": 1,
       "id": "622ac9084079aa0006d54f3c",
       "name": "",

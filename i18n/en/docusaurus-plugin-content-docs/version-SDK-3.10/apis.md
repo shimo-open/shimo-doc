@@ -964,6 +964,7 @@ axios(config)
 | The name of the field                   | type    | Examples of values                   | illustrate                                           |
 | :----------------------- | :------ | :----------------------- | :--------------------------------------------- |
 | histories                | array   |                          | Sidebar history array                                 |
+| histories[i].content     | string  |                          | Collaborate on file format data                               |
 | histories[i].createdAt   | string  | 2021-06-07T06:12:24Z     | The history of the sidebar creation time of this article                         |
 | histories[i].historyType | number  | 2                        | The sidebar history type, 1 is the operation history and 2 is the edit generated     |
 | histories[i].id          | string  | 60bdb8c847a7850006bf12c1 | Sidebar history ID                                  |
@@ -980,6 +981,7 @@ Example
 {
   "histories": [
     {
+      "content": "{\"range\":[1,1],\"changeset\":\"[[10, \\\"\\\\n\\\", \\\"line:\\\\\\\"init\\\\\\\"\\\"]]\",\"frozen\":true}",
       "createdAt": "2021-06-07T06:12:24Z",
       "historyType": 2,
       "id": "60bdb8c847a7850006bf12c1",
@@ -988,6 +990,7 @@ Example
       "userId": "user123,user134"
     },
     {
+      "content": "{\"range\":[2,3],\"changeset\":\"省略若干内容 ...\"}",
       "createdAt": "2021-06-07T06:12:39Z",
       "historyType": 2,
       "id": "60bdb8d747a7850006bf12c2",
@@ -996,6 +999,7 @@ Example
       "userId": "user123,user134"
     },
     {
+      "content": "{\"action\":\"unlock_cell\",\"range\":[\"E14:E14\"],\"name\":\"工作表1\"}",
       "createdAt": "2022-03-11T03:58:59Z",
       "historyType": 1,
       "id": "622ac9034079aa0006d54f3b",
@@ -1004,8 +1008,8 @@ Example
       "userId": "user123"
     },
     {
+      "content": "{\"action\":\"lock_sheet\",\"name\":\"工作表1\"}",
       "createdAt": "2022-03-11T03:59:04Z",
-      "fileGuid": "Vi9rVPy7v6RJvLZK",
       "historyType": 1,
       "id": "622ac9084079aa0006d54f3c",
       "name": "",
